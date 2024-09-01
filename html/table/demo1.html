@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <!-- internal style  -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lightgray;
+      }
+
+      table {
+        width: 70%;
+        border: 1.5px solid black;
+        border-collapse: collapse;
+      }
+
+      thead {
+        color: white;
+      }
+
+      tr {
+        text-align: center;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border: 2px solid black;
+      }
+
+      caption {
+        padding: 1rem 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <table>
+        <caption>
+          Create Table Using HTML
+        </caption>
+
+        <thead>
+          <tr style="background-color: teal" ;>
+            <th colspan="6">Student's Record</th>
+          </tr>
+
+          <tr style="background-color: teal" ;>
+            <th colspan="3">Personal Record</th>
+            <th colspan="3">Academic Record</th>
+          </tr>
+
+          <tr style="background-color: rgb(89, 87, 87)" ;>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Address</th>
+            <th rowspan="2">Marks</th>
+            <th rowspan="2">Percentage</th>
+            <th rowspan="2">Grade</th>
+          </tr>
+
+          <tr style="background-color: rgb(147, 146, 146)" ;>
+            <th>Zip Code</th>
+            <th>City</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Golam Mostafa</td>
+            <td>1216</td>
+            <td>Bogra</td>
+            <td>90</td>
+            <td>90%</td>
+            <td>4.00</td>
+          </tr>
+          <tr>
+            <td>Golam Mostafa</td>
+            <td>1216</td>
+            <td>Bogra</td>
+            <td>90</td>
+            <td>90%</td>
+            <td>4.00</td>
+          </tr>
+          <tr>
+            <td>Golam Mostafa</td>
+            <td>1216</td>
+            <td>Bogra</td>
+            <td>90</td>
+            <td>90%</td>
+            <td>4.00</td>
+          </tr>
+          <tr>
+            <td>Golam Mostafa</td>
+            <td>1216</td>
+            <td>Bogra</td>
+            <td>90</td>
+            <td>90%</td>
+            <td>4.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

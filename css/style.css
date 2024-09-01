@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.container {
+  background-color: teal;
+  height: 100%;
+  padding: 2rem;
+}
+
+.container-wrapper {
+  background-color: slategray;
+  color: white;
+  padding: 1rem;
+}

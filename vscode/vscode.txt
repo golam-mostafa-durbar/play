@@ -1,0 +1,7 @@
+Themes: Andromeda (Colorizer) -> Backend, Dracula Official (Dracula) -> Frontend
+
+Plugins: vscode icons, turbo console log, emoji snippets, 
+
+Shortcut: ctrl+shift+l (select all similar words), ctrl+d (one by one select similar word), ctrl+h (windows) / cmnd+options+f (mac) (find and replace)
+
+Terminal: Hyper Terminal

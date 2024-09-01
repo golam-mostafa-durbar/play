@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <!-- internal style  -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lightgray;
+      }
+
+      table {
+        width: 70%;
+        border-collapse: collapse;
+        border: 1.5px solid black;
+      }
+
+      caption {
+        padding: 2rem 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      tr {
+        text-align: center;
+      }
+
+      td,
+      th {
+        border: 1.5px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <caption>
+          Web Infomax IT Solutions
+        </caption>
+
+        <thead>
+          <tr>
+            <th rowspan="2">Sr. NO</th>
+            <th rowspan="2">Details of the Services Provided</th>
+            <th rowspan="2">Qty</th>
+            <th colspan="2">Service Period</th>
+            <th colspan="4">Service Performance Detail</th>
+          </tr>
+
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>S. No.</th>
+            <th>Service ID No:</th>
+            <th>Gap in Service (in days)</th>
+            <th>Overall Performance Remarks (Satisfactory/ un-satisfactory)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td rowspan="3">1</td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
