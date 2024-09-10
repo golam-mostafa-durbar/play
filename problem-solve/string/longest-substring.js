@@ -1,20 +1,24 @@
 // find the length of the longest substring without repeating characters
+const lengthOfLongestSubstring = (s) => {
+  let set = new Set();
 
-const lengthOfLongestSubstring = (str) => {
-  let sub = "";
-  let max = 0;
+  let left = 0;
+  let maxLen = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    if (sub.includes(str[i])) {
-      max = sub.length > max ? sub.length : max;
-      sub = "";
+  for (let right = 0; right < s.length; right++) {
+    let ch = s[right];
+
+    while (set.has(ch)) {
+      set.delete(s[left]);
+      left++;
     }
 
-    sub += str[i];
+    set.add(ch);
+    maxLen = Math.max(maxLen, right - left + 1);
   }
 
-  return max;
+  return maxLen;
 };
 
 const str = "abccabcdebb";
-console.log(lengthOfLongestSubstring(str)); // 4
+console.log(lengthOfLongestSubstring(str)); // 5
