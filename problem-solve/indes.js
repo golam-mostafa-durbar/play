@@ -1,29 +1,32 @@
-const wordPattern = (pattern, s) => {
-  const count = {};
-  const arr = s.split(" ");
+const calculate = function (s) {
+  let number = 0;
+  let signValue = 1;
+  let result = 0;
+  let operationsStack = [];
 
-  if (pattern.length !== arr.length) return false;
+  for (let i = 0; i < s.length; i++) {
+    let c = s[i];
 
-  for (let i = 0; i < pattern.length; i++) {
-    const word = arr[i];
-    const ch = pattern[i];
-
-    if (!count[ch]) {
-      if (i > 0) {
-        const values = Object.values(count);
-        if (values.includes(word)) return false;
-      }
-
-      count[ch] = word;
-    } else {
-      if (count[ch] !== word) return false;
+    if (!isNaN(parseInt(c))) {
+      number = number * 10 + parseInt(c);
+    } else if (c === "+" || c === "-") {
+      result += number * signValue;
+      signValue = c === "-" ? -1 : 1;
+      number = 0;
+    } else if (c === "(") {
+      operationsStack.push(result);
+      operationsStack.push(signValue);
+      result = 0;
+      signValue = 1;
+    } else if (c === ")") {
+      result += signValue * number;
+      result *= operationsStack.pop();
+      result += operationsStack.pop();
+      number = 0;
     }
   }
 
-  return true;
+  return result + number * signValue;
 };
 
-const pattern = "abba",
-  s = "dog dog dog dog";
-
-console.log(wordPattern(pattern, s));
+console.log(calculate("2-4-(8+2-6+(8+4-(1)+8-10))"));
